@@ -16,17 +16,7 @@ public class Storage {
     public Storage(String filePath) throws IOException {
         this.file = new File(filePath);
     }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Storage [filePath=").append(file.getPath());
-        if (input != null && !input.isEmpty()) {
-            sb.append(", input=").append(input);
-        }
-        sb.append("]");
-        return sb.toString();
-    }
+    
 
     /**
      * Creates the directory and the file if not already exist.
