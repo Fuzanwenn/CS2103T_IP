@@ -16,7 +16,15 @@ public class Storage {
     public Storage(String filePath) throws IOException {
         this.file = new File(filePath);
     }
-    
+
+    @Override
+    public String toString() {
+        if (input != null && !input.isEmpty()) {
+            return "Storage[input=" + input + "]";
+        } else {
+            return "Storage[input=not set]";
+        }
+    }
 
     /**
      * Creates the directory and the file if not already exist.
